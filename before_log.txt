@@ -1,0 +1,6 @@
+BEFORE code (1/5 checks passed)
+PASS C1 Request without token: HTTP 401
+FAIL C2 Bob deletes Alice's task: HTTP 204; Alice has 1 task(s) left
+FAIL C3 Task with non-string title (12345): HTTP 500
+FAIL C4 Task with 10,000-character title: HTTP 201
+FAIL C5 HTML/script payload in task title: page title "XSS-RAN"; injected <h1> elements: 1

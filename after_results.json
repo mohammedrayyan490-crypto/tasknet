@@ -1,0 +1,37 @@
+{
+  "label": "after",
+  "passed": 5,
+  "failed": 0,
+  "results": [
+    {
+      "id": "C1",
+      "name": "Request without token",
+      "observed": "HTTP 401",
+      "pass": true
+    },
+    {
+      "id": "C2",
+      "name": "Bob deletes Alice's task",
+      "observed": "HTTP 404; Alice has 2 task(s) left",
+      "pass": true
+    },
+    {
+      "id": "C3",
+      "name": "Task with non-string title (12345)",
+      "observed": "HTTP 400",
+      "pass": true
+    },
+    {
+      "id": "C4",
+      "name": "Task with 10,000-character title",
+      "observed": "HTTP 400",
+      "pass": true
+    },
+    {
+      "id": "C5",
+      "name": "HTML/script payload in task title",
+      "observed": "page title \"TaskNest\"; injected <h1> elements: 0",
+      "pass": true
+    }
+  ]
+}

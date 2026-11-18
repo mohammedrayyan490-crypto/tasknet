@@ -1,0 +1,37 @@
+{
+  "label": "before",
+  "passed": 1,
+  "failed": 4,
+  "results": [
+    {
+      "id": "C1",
+      "name": "Request without token",
+      "observed": "HTTP 401",
+      "pass": true
+    },
+    {
+      "id": "C2",
+      "name": "Bob deletes Alice's task",
+      "observed": "HTTP 204; Alice has 1 task(s) left",
+      "pass": false
+    },
+    {
+      "id": "C3",
+      "name": "Task with non-string title (12345)",
+      "observed": "HTTP 500",
+      "pass": false
+    },
+    {
+      "id": "C4",
+      "name": "Task with 10,000-character title",
+      "observed": "HTTP 201",
+      "pass": false
+    },
+    {
+      "id": "C5",
+      "name": "HTML/script payload in task title",
+      "observed": "page title \"XSS-RAN\"; injected <h1> elements: 1",
+      "pass": false
+    }
+  ]
+}

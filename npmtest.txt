@@ -1,0 +1,26 @@
+✔ task routes reject requests without a token or with a forged token (34.767426ms)
+✔ register validates input, rejects duplicates, and login rejects wrong passwords (212.483659ms)
+✔ a user can create, list, update and delete their own task (100.20225ms)
+✔ invalid task input returns 400 instead of crashing (non-string, empty, too long) (108.89254ms)
+✔ another user cannot update or delete someone else's task (176.937815ms)
+✔ oversized request bodies are rejected with 413 (104.465821ms)
+✔ responses carry security headers and never expose password hashes (45.852322ms)
+✔ escapeHtml escapes tags so injected markup is shown as text (0.80552ms)
+✔ escapeHtml escapes ampersands and quotes (0.126565ms)
+✔ escapeHtml handles null, undefined and numbers safely (0.144934ms)
+✔ escapeHtml leaves plain text unchanged (0.103532ms)
+✔ validateTask accepts a normal title and trims it (0.680297ms)
+✔ validateTask rejects empty and whitespace-only titles (0.160769ms)
+✔ validateTask rejects titles over 100 characters but accepts exactly 100 (0.117028ms)
+✔ validateTask rejects non-string titles and non-object bodies (0.176405ms)
+✔ validateTask checks due dates (real calendar dates only) (0.504331ms)
+✔ validateTask partial mode allows updating only done (0.134355ms)
+✔ validateUser enforces email format and password length (0.413775ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1028.38614
